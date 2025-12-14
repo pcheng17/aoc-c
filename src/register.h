@@ -1,4 +1,6 @@
-#pragma once
+#ifndef AOC_REGISTER_H
+#define AOC_REGISTER_H
+
 #include "solution.h"
 
 #define CONCAT_(a, b) a##b
@@ -15,3 +17,5 @@
     static const AoCSolution* CONCAT(__aoc_ptr_, __LINE__)                 \
         __attribute__((used, section("aoc_solutions"))) = &CONCAT(__aoc_sol_, __LINE__);
 #endif
+
+#endif // AOC_REGISTER_H
