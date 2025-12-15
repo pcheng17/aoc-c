@@ -17,8 +17,8 @@ static inline char* aoc_read_file(const char* path)
     char* buf = malloc(size + 1);
     if (buf)
     {
-        fread(buf, 1, size, f);
-        buf[size] = '\0';
+        size_t read = fread(buf, 1, size, f);
+        buf[read] = '\0';
     }
     fclose(f);
     return buf;
