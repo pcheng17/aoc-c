@@ -26,8 +26,8 @@ static void solve(const char* input)
 
     }
 
-    print_a(part_a);
-    print_b(part_b);
+    print_a("Not implemented");
+    print_b("Not implemented");
 }
 
 REGISTER_SOLUTION(.year = 2025, .day = 2, .solve = solve)
