@@ -31,9 +31,7 @@ static void solve(const char* input)
         }
 
         // Move past the white space
-        ++p;
-        ++p;
-        ++p;
+        p += 3;
 
         int32_t r = 0;
         while (*p >= '0' && *p <= '9') {
