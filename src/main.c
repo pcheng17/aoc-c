@@ -9,6 +9,16 @@
 #include <mach-o/ldsyms.h>
 #endif
 
+int compare_solutions(const void* a, const void* b)
+{
+    const AoCSolution* sol_a = *(const AoCSolution**)a;
+    const AoCSolution* sol_b = *(const AoCSolution**)b;
+
+    if (sol_a->year != sol_b->year)
+        return sol_a->year - sol_b->year;
+    return sol_a->day - sol_b->day;
+}
+
 int main(int argc, char** argv)
 {
     const int run_all = argc == 1;
@@ -26,6 +36,8 @@ int main(int argc, char** argv)
     const AoCSolution** start = __start_aoc_solutions;
     const AoCSolution** stop = __stop_aoc_solutions;
 #endif
+
+    qsort(start, (size_t)(stop - start), sizeof(AoCSolution*), compare_solutions);
 
     struct timespec ts_start, ts_end;
 
