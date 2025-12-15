@@ -17,6 +17,7 @@ if (CMAKE_C_COMPILER_ID MATCHES "Clang|GNU")
         -Wshadow
         -Wconversion
         -Wno-unused-parameter
+        -O3
     )
 endif()
 

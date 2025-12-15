@@ -18,7 +18,7 @@ BreakConstructorInitializers: BeforeComma
 BraceWrapping:
   AfterCaseLabel: true
   AfterClass: true
-  AfterControlStatement: Always
+  AfterControlStatement: MultiLine
   AfterEnum: true
   AfterFunction: true
   AfterNamespace: true
@@ -26,7 +26,7 @@ BraceWrapping:
   AfterUnion: true
   AfterExternBlock: true
   BeforeCatch: false
-  BeforeElse: true
+  BeforeElse: false
   IndentBraces: false
   SplitEmptyFunction: true
   SplitEmptyRecord: true
